@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3dab3amplifyprojectstorageb0e55c26",
+  "bucketName": "dab3-amplify-project-storage-b0e55c26",
+  "policyUUID": "3ff1970c",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

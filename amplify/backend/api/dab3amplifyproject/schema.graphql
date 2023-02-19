@@ -1,0 +1,32 @@
+enum InspClass {
+  NORMAL
+  ANOMALY
+}
+
+enum InspModus {
+  AUTOMATIC
+  MANUAL
+}
+
+type Inspection @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  imageS3Url: String
+  inspModelTS: AWSTimestamp
+  inspManualTS: AWSTimestamp
+  inspModelClass: InspClass
+  inspManualClass: InspClass
+  inspModelConf: Float
+}
+
+type InspectionPoint @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  model: String
+  modelDeployed: AWSTimestamp
+  inspModus: InspModus
+}
+
+type Model @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  version: String
+}
